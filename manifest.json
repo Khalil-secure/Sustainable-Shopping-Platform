@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Product Scraper",
+  "version": "1.0",
+  "description": "Scrapes product data from Amazon-like pages",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://localhost/*"],
+  "action": {
+    "default_title": "Scrape Product",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
